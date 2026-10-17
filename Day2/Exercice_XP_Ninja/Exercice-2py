@@ -1,8 +1,0 @@
-while True:
-    word = input("Enter a sentence without the letter A: ")
-
-    if "a" not in word.lower():
-        print("Congratulations! ")
-        break
-    else:
-        print("The sentence contains the letter A. Try again!")
