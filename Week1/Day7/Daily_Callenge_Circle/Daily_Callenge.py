@@ -6,6 +6,10 @@ from functools import total_ordering
 
 @total_ordering
 class Circle:
+<<<<<<< HEAD
+=======
+    """A circle defined by either its radius or its diameter."""
+>>>>>>> origin/main
 
     def __init__(self, radius=None, diameter=None):
         if radius is None and diameter is None:
@@ -41,6 +45,7 @@ class Circle:
 
 if __name__ == "__main__":
     c1 = Circle(radius=2)
+<<<<<<< HEAD
     c2 = Circle(diameter=10)  
     c3 = Circle(radius=1)
 
@@ -51,11 +56,27 @@ if __name__ == "__main__":
     print(c1 + c2)                      
     print(c1 > c2)                      
     print(c1 == Circle(radius=2))       
+=======
+    c2 = Circle(diameter=10)   # radius 5
+    c3 = Circle(radius=1)
+
+    print(c1)
+    print(c2.radius, c2.diameter)       # 5.0 10.0
+    print(f"{c1.area():.2f}")           # 12.57
+
+    print(c1 + c2)                      # radius 7.0
+    print(c1 > c2)                      # False
+    print(c1 == Circle(radius=2))       # True
+>>>>>>> origin/main
 
     circles = [c1, c2, c3]
     circles.sort()
     for c in circles:
+<<<<<<< HEAD
         print(c)                       
+=======
+        print(c)                        # radius 1, then 2, then 5.0
+>>>>>>> origin/main
 
 
 import turtle
@@ -69,9 +90,15 @@ def draw_circles(circles):
 
     for c in sorted(circles):
         t.pendown()
+<<<<<<< HEAD
         t.circle(c.radius * 10)    
         t.penup()
         t.forward(c.radius * 20 + 20)  
+=======
+        t.circle(c.radius * 10)    # x10 to make the circles visible
+        t.penup()
+        t.forward(c.radius * 20 + 20)   # move right for the next circle
+>>>>>>> origin/main
 
     turtle.done()
 

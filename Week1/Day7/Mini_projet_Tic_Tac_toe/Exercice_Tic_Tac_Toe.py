@@ -13,7 +13,11 @@ def display_board(board):
 
 
 def player_input(player, board):
+<<<<<<< HEAD
    
+=======
+    """Ask the player for a row and a column (1 to 3) until the move is valid."""
+>>>>>>> origin/main
     while True:
         try:
             row = int(input("Enter row: "))
