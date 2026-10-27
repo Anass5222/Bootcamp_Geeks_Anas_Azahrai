@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Football Legends Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo"><span aria-hidden="true">⚽</span> Football Legends</h1>
+    <input type="search" id="search" placeholder="Search a player…" aria-label="Search players" autocomplete="off">
+    <button type="button" id="theme-toggle" class="icon-btn" aria-label="Switch between light and dark theme">◐</button>
+  </header>
+
+  <section class="controls" aria-label="Filters and sorting">
+    <div id="category-buttons" class="chips" role="group" aria-label="Categories"></div>
+    <label class="sort">
+      Sort by
+      <select id="sort">
+        <option value="default">Default</option>
+        <option value="az">Name A–Z</option>
+        <option value="za">Name Z–A</option>
+        <option value="rating">Most Ballon d'Or wins</option>
+      </select>
+    </label>
+  </section>
+
+  <main>
+    <p id="results-count" class="results-count" aria-live="polite"></p>
+    <div id="cards-grid"></div>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <p>No players match your search.</p>
+      <p>Try another name, or choose “All” to clear the category.</p>
+    </div>
+  </main>
+
+  <dialog id="modal" aria-labelledby="modal-title">
+    <button type="button" id="modal-close" class="icon-btn modal-close" aria-label="Close details">✕</button>
+    <img id="modal-image" alt="">
+    <div class="modal-body">
+      <p id="modal-meta" class="badge-row"></p>
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+    </div>
+  </dialog>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
