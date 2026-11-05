@@ -1,0 +1,28 @@
+{
+  "name": "weeks",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/Anass5222/Bootcamp_Geeks_Anas_Azahrai#readme",
+  "bugs": {
+    "url": "https://github.com/Anass5222/Bootcamp_Geeks_Anas_Azahrai/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anass5222/Bootcamp_Geeks_Anas_Azahrai.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ansi-regex": "^4.1.1",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "prompt-sync": "^4.2.0",
+    "strip-ansi": "^5.2.0"
+  }
+}

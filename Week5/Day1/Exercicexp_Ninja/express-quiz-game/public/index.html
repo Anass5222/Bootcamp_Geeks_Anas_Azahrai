@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Express Quiz Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <h1>🧠 Express Quiz Game</h1>
+
+            <p>Test your knowledge and have fun!</p>
+
+        </header>
+
+
+        <!-- START SECTION -->
+
+        <section id="startSection" class="card">
+
+            <h2>Welcome to the Quiz!</h2>
+
+            <p>Are you ready to test your knowledge?</p>
+
+            <button id="startButton">
+                Start Quiz 🚀
+            </button>
+
+            <p id="startError" class="error" aria-live="polite"></p>
+
+        </section>
+
+
+        <!-- QUIZ SECTION -->
+
+        <section id="quizSection" class="card" hidden>
+
+            <div class="quiz-header">
+
+                <div>
+                    <span>Question</span>
+                    <h2 id="progress">1 / 8</h2>
+                </div>
+
+                <div class="score-box">
+                    <span>Your score</span>
+                    <h2 id="score">0</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Progress Bar -->
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+
+            <!-- Question -->
+
+            <h2 id="questionText">
+                Question appears here
+            </h2>
+
+
+            <!-- Answers Form -->
+
+            <form id="answerForm">
+
+                <fieldset id="optionsContainer">
+
+                    <legend>Select your answer:</legend>
+
+                </fieldset>
+
+                <button type="submit" id="submitButton">
+                    Submit Answer
+                </button>
+
+            </form>
+
+
+            <!-- Feedback -->
+
+            <p id="feedback" aria-live="polite"></p>
+
+
+            <!-- Next Question -->
+
+            <button id="nextButton" hidden>
+                Next Question ➜
+            </button>
+
+        </section>
+
+
+        <!-- FINAL RESULT -->
+
+        <section id="resultSection" class="card" hidden>
+
+            <h2>🎉 Quiz Completed!</h2>
+
+            <p id="finalMessage"></p>
+
+            <div class="final-score">
+                <span>Your final score</span>
+                <h1 id="finalScore">0 / 8</h1>
+            </div>
+
+            <button id="restartButton">
+                Play Again 🔄
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
